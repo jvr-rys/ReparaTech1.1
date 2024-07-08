@@ -99,6 +99,31 @@
         }
         button.parent().parent().find('input').val(newVal);
     });
+
+    // Add to cart button
+    $('.btn-add-to-cart').on('click', function (e) {
+        e.preventDefault();
+        var productId = $(this).data('product-id');
+        var quantity = 1; // Assuming the default quantity is 1. You can adjust as needed.
+
+        // Function to add the product to the cart (this is just a placeholder, adapt as necessary)
+        addToCart(productId, quantity);
+    });
+
+    // Function to handle adding products to the cart (placeholder)
+    function addToCart(productId, quantity) {
+        // Example: Add the product to localStorage (replace with actual cart logic)
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        var productExists = cart.find(item => item.productId === productId);
+
+        if (productExists) {
+            productExists.quantity += quantity;
+        } else {
+            cart.push({ productId: productId, quantity: quantity });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Product added to cart!');
+    }
     
 })(jQuery);
-
