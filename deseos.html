@@ -30,7 +30,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
    <!-- body -->
-   <body class="main-layout inner_posituong">
+   <body class="main-layout inner_posituong computer_page">
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
@@ -58,19 +58,19 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
-                              <li class="nav-item ">
+                              <li class="nav-item active">
                                  <a class="nav-link" href="index.html">Home</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="about.html">About</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item  active">
                                  <a class="nav-link" href="deseos.html">Lista de Deseos</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="laptop.html">Laptop</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                  <a class="nav-link" href="product.html">Products</a>
                               </li>
                               <li class="nav-item">
@@ -90,86 +90,70 @@
             </div>
          </div>
       </header>
+      
+      <div class="container">
+         <h1 class="mt-4">Lista de Deseos</h1>
+         <table class="table table-bordered mt-3">
+             <thead>
+                 <tr>
+                     <th>Producto</th>
+                     <th>Descripción</th>
+                     <th>Precio</th>
+                     <th>Categoría</th>
+                     <th>Acciones</th>
+                 </tr>
+             </thead>
+             <tbody id="wishlist">
+                 <tr>
+                     <td>Mantenimiento a Equipo Individual</td>
+                     <td>El mantenimiento individual es el destinado a la conservación de equipos o instalaciones mediante realización de revisión y reparación que garanticen su buen funcionamiento y fiabilidad.</td>
+                     <td>$110.00</td>
+                     <td>Paquete individual</td>
+                     <td><button class="btn btn-eliminar" onclick="removeItem(this)">Eliminar</button></td>
+                 </tr>
+                 <tr>
+                     <td>Instalacion de Camaras</td>
+                     <td>instalación de equipos conectados que generan un circuito de imágenes que solo puede ser visto por un grupo determinado de personas,</td>
+                     <td>$310.00</td>
+                     <td>Redes</td>
+                     <td><button class="btn btn-eliminar" onclick="removeItem(this)">Eliminar</button></td>
+                 </tr>
+             </tbody>
+         </table>
+     </div>
+ 
+     <!-- Enlace a Bootstrap y jQuery JS -->
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+     <script>
+         function removeItem(button) {
+             var row = button.parentNode.parentNode;
+             row.parentNode.removeChild(row);
+         }
+     </script>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- products -->
-      <div  class="products">
+      <!-- laptop  section -->
+      <div class="laptop">
          <div class="container">
             <div class="row">
-               <div class="col-md-12">
+               <div class="col-md-6">
                   <div class="titlepage">
-                     <h2>Our Products</h2>
+                     <p>Every Computer and laptop</p>
+                     <h2>Up to 40% off !</h2>
+                     <a class="read_more" href="#">Shop Now</a>
                   </div>
                </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="our_products">
-                     <div class="row">
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product1.png" alt="#"/></figure>
-                              <h3>Computer</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product2.png" alt="#"/></figure>
-                              <h3>Laptop</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product3.png" alt="#"/></figure>
-                              <h3>Tablet</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product4.png" alt="#"/></figure>
-                              <h3>Speakers</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product5.png" alt="#"/></figure>
-                              <h3>internet</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product6.png" alt="#"/></figure>
-                              <h3>Hardisk</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="images/product7.png" alt="#"/></figure>
-                              <h3>Rams</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="images/product8.png" alt="#"/></figure>
-                              <h3>Bettery</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="images/product9.png" alt="#"/></figure>
-                              <h3>Drive</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-12">
-                           <a class="read_more" href="#">See More</a>
-                        </div>
-                     </div>
+               <div class="col-md-6">
+                  <div class="laptop_box">
+                     <figure><img src="images/pc.png" alt="#"/></figure>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <!-- end products -->
+      </div>
+      <!-- end laptop  section -->
    <!--  footer -->
    <footer>
       <div class="footer">
