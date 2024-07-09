@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Perfil</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/usuario.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body>
+      <!-- Dashboard ususarios -->
+      <div class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2>Menú</h2>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="orden-compra.html">Compras</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+      
+      <div class="main-content">
+        <nav class="navbar bg-sidebar-color text-center">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Mi Perfil</span>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="d-flex justify-content-center mt-4">
+      <div class="card" style="width: 400px;">
+          <div class="d-flex">
+              <img src="https://cdn.icon-icons.com/icons2/2468/PNG/512/user_kids_avatar_user_profile_icon_149314.png" class="img-fluid" style="width: 150px; height: 150px;" alt="Imagen_usuario">
+              <div class="card-body">
+                  <h3 class="card-title">Luis Javier Lopez</h3>
+                  <p class="card-text"><b>correo:</b> JaLopez@outlook.es</p>
+                  <p class="card-text"><b>Dirección:</b> SAMARTIN 103, CENTRO, 47600</p>
+                  <p class="card-text"><b>Ciudad:</b> Aguascalientes</p>
+                  <p class="card-text"><b>Teléfono:</b> +52378-782-4282</p>
+                  <p class="card-text"><b>Tipo de cuenta:</b> Empresarial</p>
+                  <button class="btn btn-primary" id="edit-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                  </svg></button>
+                  <div id="edit-fields" style="display: none;">
+                      <input type="text" id="name-input" class="form-control mt-2" value="Luis Javier Lopez">
+                      <input type="email" id="email-input" class="form-control mt-2" value="JaLopez@outlook.es">
+                      <input type="text" id="address-input" class="form-control mt-2" value="SAMARTIN 103, CENTRO, 47600">
+                      <input type="text" id="city-input" class="form-control mt-2" value="Aguascalientes">
+                      <input type="text" id="phone-input" class="form-control mt-2" value="+52378-782-4282">
+                      <input type="text" id="account-type-input" class="form-control mt-2" value="Empresarial">
+                      <button class="btn btn-success mt-2" id="save-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-floppy-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0H3v5.5A1.5 1.5 0 0 0 4.5 7h7A1.5 1.5 0 0 0 13 5.5V0h.086a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5H14v-5.5A1.5 1.5 0 0 0 12.5 9h-9A1.5 1.5 0 0 0 2 10.5V16h-.5A1.5 1.5 0 0 1 0 14.5z"/>
+                        <path d="M3 16h10v-5.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5zm9-16H4v5.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zM9 1h2v4H9z"/>
+                      </svg></button>
+                      <button class="btn btn-secondary mt-2" id="cancel-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                      </svg></button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  </div>
+  
+    
+      
+      <!-- Dashboard ususarios -->
+ 
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+
+      <script>
+        document.getElementById('edit-btn').addEventListener('click', function() {
+            document.getElementById('edit-fields').style.display = 'block';
+            document.getElementById('edit-btn').style.display = 'none';
+            document.querySelectorAll('.card-title, .card-text').forEach(el => el.style.display = 'none');
+        });
+        
+        document.getElementById('cancel-btn').addEventListener('click', function() {
+            document.getElementById('edit-fields').style.display = 'none';
+            document.getElementById('edit-btn').style.display = 'block';
+            document.querySelectorAll('.card-title, .card-text').forEach(el => el.style.display = 'block');
+        });
+        
+        document.getElementById('save-btn').addEventListener('click', function() {
+            const newName = document.getElementById('name-input').value;
+            const newEmail = document.getElementById('email-input').value;
+            const newAddress = document.getElementById('address-input').value;
+            const newCity = document.getElementById('city-input').value;
+            const newPhone = document.getElementById('phone-input').value;
+            const newAccountType = document.getElementById('account-type-input').value;
+        
+            document.querySelector('.card-title').textContent = newName;
+            document.querySelectorAll('.card-text')[0].innerHTML = `<b>correo:</b> ${newEmail}`;
+            document.querySelectorAll('.card-text')[1].innerHTML = `<b>Dirección:</b> ${newAddress}`;
+            document.querySelectorAll('.card-text')[2].innerHTML = `<b>Ciudad:</b> ${newCity}`;
+            document.querySelectorAll('.card-text')[3].innerHTML = `<b>Teléfono:</b> ${newPhone}`;
+            document.querySelectorAll('.card-text')[4].innerHTML = `<b>Tipo de cuenta:</b> ${newAccountType}`;
+        
+            document.getElementById('edit-fields').style.display = 'none';
+            document.getElementById('edit-btn').style.display = 'block';
+            document.querySelectorAll('.card-title, .card-text').forEach(el => el.style.display = 'block');
+        });
+        </script>
+        
+
+
+   </body>
+</html>
+
