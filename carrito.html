@@ -25,6 +25,8 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="https://www.paypal.com/sdk/js?client-id=AY0FmYPOCTuzhPqD9KHEJgX9sLVwgjXVEC_hy6c20KGHiFo51AepqEfXrcYI7Av-ETCPsBBRHNErGJp3&currency=MXN"></script>
+
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -147,10 +149,9 @@
                         </tbody>
                      </table>
                      <div class="row">
-                        <div class="col-md-12 text-right">
-                           <h4>Total: <span id="cart-total">$999.99</span></h4>
-                           <a class="read_more" href="checkout.html">Proceed to Checkout</a>
-                        </div>
+                        <div class="btn">
+                           <div id="paypal-button-container"></div>  
+                       </div>
                      </div>
                   </div>
                </div>
@@ -220,10 +221,33 @@
       <script src="js/custom.js"></script>
    </body>
    <script>
+      paypal.Buttons({
+         createOrder: function(data, actions) {
+             return actions.order.create({
+                 purchase_units: [{
+                     amount: {
+                         currency_code: 'MXN',
+                         value: '999.99'
+                     }
+                 }]
+             });
+         },
+     
+             onApprove: function(data, actions) {
+                 return actions.order.capture().then(function(details) {
+                     alert('Pago completado. ¡Gracias por tu compra!');
+                     // Puedes agregar aquí lógica adicional después de completar el pago
+                 });
+             }
+         }).render('#paypal-button-container');
+     </script>
+   <script>
       $(document).on('click', '.remove-btn', function() {
              $(this).closest('tr').remove();
              updateTotal();
          });
    </script>
+
+
 </html>
 
