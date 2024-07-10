@@ -65,7 +65,7 @@
                                  <a class="nav-link" href="about.html">About</a>
                               </li>
                               <li class="nav-item  active">
-                                 <a class="nav-link" href="computer.html">Computer</a>
+                                 <a class="nav-link" href="deseos.html">Lista de Deseos</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="laptop.html">Laptop</a>
@@ -90,6 +90,47 @@
             </div>
          </div>
       </header>
+      
+      <div class="container">
+         <h1 class="mt-4">Lista de Deseos</h1>
+         <table class="table table-bordered mt-3">
+             <thead>
+                 <tr>
+                     <th>Producto</th>
+                     <th>Descripción</th>
+                     <th>Precio</th>
+                     <th>Categoría</th>
+                     <th>Acciones</th>
+                 </tr>
+             </thead>
+             <tbody id="wishlist">
+                 <tr>
+                     <td>Mantenimiento a Equipo Individual</td>
+                     <td>El mantenimiento individual es el destinado a la conservación de equipos o instalaciones mediante realización de revisión y reparación que garanticen su buen funcionamiento y fiabilidad.</td>
+                     <td>$110.00</td>
+                     <td>Paquete individual</td>
+                     <td><button class="btn btn-eliminar" onclick="removeItem(this)">Eliminar</button></td>
+                 </tr>
+                 <tr>
+                     <td>Instalacion de Camaras</td>
+                     <td>instalación de equipos conectados que generan un circuito de imágenes que solo puede ser visto por un grupo determinado de personas,</td>
+                     <td>$310.00</td>
+                     <td>Redes</td>
+                     <td><button class="btn btn-eliminar" onclick="removeItem(this)">Eliminar</button></td>
+                 </tr>
+             </tbody>
+         </table>
+     </div>
+ 
+     <!-- Enlace a Bootstrap y jQuery JS -->
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+     <script>
+         function removeItem(button) {
+             var row = button.parentNode.parentNode;
+             row.parentNode.removeChild(row);
+         }
+     </script>
       <!-- end header inner -->
       <!-- end header -->
       <!-- laptop  section -->
@@ -113,7 +154,6 @@
       </div>
       </div>
       <!-- end laptop  section -->
-
    <!--  footer -->
    <footer>
       <div class="footer">
@@ -154,16 +194,13 @@
                <div class="row">
                   <div class="col-md-12">
                      <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
-
                   </div>
                </div>
             </div>
          </div>
-
       </div>
    </footer>
    <!-- end footer -->
-
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>

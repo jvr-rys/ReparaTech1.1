@@ -1,0 +1,73 @@
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4f4aa6; /* Fondo morado */
+    color: #fff; /* Texto blanco */
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+    transition: 0.3s;
+    padding-top: 20px;
+    z-index: 1000;
+  }
+  
+  .sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff; /* Texto blanco */
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #48ca95; 
+    color: #000; 
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .sidebar h2 {
+    padding: 0 25px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .sidebar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Texto blanco */
+    text-transform: uppercase;
+  }
+  
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+  
+
+  .bg-sidebar-color {
+    background-color: #4f4aa6; /* Color del sidebar */
+    color: #fff; /* Texto blanco */
+}
+
+.card {
+    width: 1500px; /* Ancho de la tarjeta */
+    text-align: center; /* Centrar contenido dentro de la tarjeta */
+}
+
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  
