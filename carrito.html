@@ -110,28 +110,55 @@
             </div>
          </div>
       </header>
-      <!-- end header inner -->
-      <!-- end header -->
-      <!-- laptop1 -->
-      <div class="laptop1">
+       <!-- Shopping Cart -->
+       <div class="products">
          <div class="container">
             <div class="row">
-               <div class="col-md-7">
-                  <div class="laptop1_img">
-                     <figure><img src="images/leptop.jpg" alt="#"/></figure>
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Shopping Cart</h2>
                   </div>
                </div>
-               <div class="col-md-5">
-                  <div class="titlepage">
-                     <h2>laptop</h2>
-                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-                     <a class="read_more" href="#">Read More</a>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="cart_container">
+                     <table class="table table-bordered">
+                        <thead>
+                           <tr>
+                              <th>Product</th>
+                              <th>Name</th>
+                              <th>Quantity</th>
+                              <th>Price</th>
+                              <th>Total</th>
+                              <th>Action</th>
+                           </tr>
+                        </thead>
+                        <tbody id="cart-body">
+                           <tr>
+                              <td><img src="images/Logopc.jpg" alt="Computer" style="width: 50px;"></td>
+                              <td>High-Performance Computer</td>
+                              <td><input type="number" value="1" min="1" class="form-control quantity"></td>
+                              <td class="price">$999.99</td>
+                              <td class="total">$999.99</td>
+                              <td><button class="btn btn-danger remove-btn">Remove</button></td>
+                           </tr>
+                           <!-- Additional items can be added here -->
+                        </tbody>
+                     </table>
+                     <div class="row">
+                        <div class="col-md-12 text-right">
+                           <h4>Total: <span id="cart-total">$999.99</span></h4>
+                           <a class="read_more" href="checkout.html">Proceed to Checkout</a>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <!-- end laptop1 -->
+      <!-- end Shopping Cart -->
+
 
        <!--  footer -->
    <footer>
@@ -192,5 +219,11 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
    </body>
+   <script>
+      $(document).on('click', '.remove-btn', function() {
+             $(this).closest('tr').remove();
+             updateTotal();
+         });
+   </script>
 </html>
 
