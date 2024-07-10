@@ -5,11 +5,13 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f8f9fa;
+
     color: #666666;
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
     line-height: 1.80857;
     font-weight: normal;
+
 }
 
 .cont {
@@ -39,6 +41,8 @@ body {
     font-weight: 400;
     color: #fff;
     text-align: center;
+
+
     user-select: none;
     background-color: #007bff;
     border: 1px solid transparent;
@@ -147,3 +151,4 @@ body {
 .login-form .forgot-password a:hover {
     text-decoration: underline;
 }
+
