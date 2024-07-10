@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f8f9fa;
+    background-color: #4f4aa6;
 
     color: #666666;
     font-size: 14px;
@@ -55,7 +55,7 @@ body {
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #48ca95;
 }
 
 .btn-primary:hover {
@@ -68,7 +68,6 @@ body {
     border-color: #545b62;
 }
 
-/*---------------------------- login form area ----------------------------*/
 
 .login-container {
     display: flex;

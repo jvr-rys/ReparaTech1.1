@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
 
 .sidebar {
     height: 100vh;
@@ -5,14 +9,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #4f4aa6; /* Fondo morado */
-    color: #fff; /* Texto blanco */
-    font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+    background-color: #4f4aa6;
+    color: #fff; 
+    font-family: 'Poppins', sans-serif; 
     transition: 0.3s;
     padding-top: 20px;
     z-index: 1000;
   }
-  
+
   .sidebar a {
     padding: 15px 25px;
     text-decoration: none;
@@ -21,12 +25,12 @@
     display: block;
     transition: 0.3s;
   }
-  
+
   .sidebar a:hover {
     background-color: #48ca95; 
     color: #000; 
   }
-  
+
   .sidebar .closebtn {
     position: absolute;
     top: 0;
@@ -34,40 +38,108 @@
     font-size: 36px;
     margin-left: 50px;
   }
-  
+
   .sidebar h2 {
     padding: 0 25px;
     font-size: 22px;
     margin-bottom: 20px;
     font-weight: bold;
   }
-  
+
   .sidebar .logo a {
     font-size: 24px;
     font-weight: bold;
     color: #fff; /* Texto blanco */
     text-transform: uppercase;
   }
-  
+
   .main-content {
     margin-left: 250px;
     padding: 20px;
     transition: margin-left 0.3s;
   }
-  
+
+
+.sidebar a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #48ca95; 
+  color: #000; 
+}
 
   .bg-sidebar-color {
-    background-color: #4f4aa6; /* Color del sidebar */
-    color: #fff; /* Texto blanco */
+    background-color: #4f4aa6; 
+    color: #fff;
+  }
+    .sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidebar h2 {
+  padding: 0 25px;
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sidebar .logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* Texto blanco */
+  text-transform: uppercase;
+}
+
+.main-content {
+  margin-left: 250px; /* Ajusta el margen para no solapar con el sidebar */
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.bg-sidebar-color {
+  background-color: #4f4aa6; /* Color del sidebar */
+  color: #fff; /* Texto blanco */
 }
 
 .card {
     width: 1500px; /* Ancho de la tarjeta */
     text-align: center; /* Centrar contenido dentro de la tarjeta */
+  width: 1500px; /* Ancho de la tarjeta */
+  text-align: center; /* Centrar contenido dentro de la tarjeta */
+}
+
+.table {
+  margin: 0 auto; /* Centrar la tabla dentro de .main-content */
+  width: 80%; /* Ajusta el ancho según tus necesidades */
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.margen {
+  margin-left: 10%
+}
+.margen2 {
+  margin-left: 45%
 }
 
   @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
-  
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
