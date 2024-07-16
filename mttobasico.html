@@ -25,6 +25,7 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="https://www.paypal.com/sdk/js?client-id=AY0FmYPOCTuzhPqD9KHEJgX9sLVwgjXVEC_hy6c20KGHiFo51AepqEfXrcYI7Av-ETCPsBBRHNErGJp3&currency=MXN"></script>
     
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -133,14 +134,23 @@
                   <div class="titlepage">
                      <h2 class="left">Paquete de mantenimiento básico</h2>
                      <ul class="justificado">
-                        <li>Cantidad de equipos: 10</li>
-                        <li>Mantenimiento preventivo y correctivo de PCs y laptops</li>
-                        <li>Actualizaciones de software y parches de seguridad</li>
-                        <li>Soporte remoto (hasta 5 horas al mes)</li>
-                        <li>Instalación y configuración de software</li>
-                        <li>Gestión básica de antivirus</li>
+                        <li><b>Cantidad de equipos:</b> 10</li>
+                        <li><b>Descripción:</b></li>
+                        <li>Mantenimiento preventivo y correctivo de equipos de computo.</li>
+                        <li><b>Descripción larga:</b></li>
+                        <li>Mantenimiento preventivo y correctivo de Pcs y laptops
+                        Actualizaciones de software y parches de seguridad
+                        Soporte remoto (hasta 5 horas al mes). Asi como la 
+                        instalación y configuración de software de
+                        gestión básica de antivirus</li>
+                        <li><b>Precio:</b> $300.00</li>
                     </ul>
-                     <a class="read_more" href="#">$300.00</a>
+                    <br>
+                     <a class="read_more" href="deseos.html">Lista de deseos</a>
+                     <a class="read_more" href="carrito.html">Agregar al carrito</a>
+                     </div>
+                        <div class="btn margen2">
+                        <div id="paypal-button-container"></div> 
                   </div>
                </div>
             </div>
@@ -203,5 +213,26 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
    </body>
+   <script>
+      paypal.Buttons({
+         createOrder: function(data, actions) {
+             return actions.order.create({
+                 purchase_units: [{
+                     amount: {
+                         currency_code: 'MXN',
+                         value: '300.00'
+                     }
+                 }]
+             });
+         },
+     
+             onApprove: function(data, actions) {
+                 return actions.order.capture().then(function(details) {
+                     alert('Pago completado. ¡Gracias por tu compra!');
+                     // Puedes agregar aquí lógica adicional después de completar el pago
+                 });
+             }
+         }).render('#paypal-button-container');
+     </script>
 </html>
 
