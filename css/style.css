@@ -1066,10 +1066,18 @@ ul.social_icon li a:hover {
 
 .about_img figure {
      margin: 0;
+     text-align: center;
+}
+
+.img{
+     margin right:2opx ;
+     text-align: center;
+     width: 60%;
+     height: 60%;
 }
 
 .about_img figure img {
-     width: 100%;
+     width: 30%;
 }
 
 
