@@ -5,17 +5,16 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #4f4aa6;
-
     color: #666666;
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
     line-height: 1.80857;
     font-weight: normal;
-
 }
 
 .cont {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
@@ -24,6 +23,13 @@ body {
     border-radius: 5px;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-image {
+    width: 100%;
+    max-width: 250px; 
+    max-height: 70px;
+    margin-bottom: 2px; 
 }
 
 .cont-form {
@@ -41,8 +47,6 @@ body {
     font-weight: 400;
     color: #fff;
     text-align: center;
-
-
     user-select: none;
     background-color: #007bff;
     border: 1px solid transparent;
@@ -67,7 +71,6 @@ body {
     background-color: #5a6268;
     border-color: #545b62;
 }
-
 
 .login-container {
     display: flex;
@@ -150,4 +153,3 @@ body {
 .login-form .forgot-password a:hover {
     text-decoration: underline;
 }
-
