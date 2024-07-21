@@ -25,7 +25,7 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -133,19 +133,39 @@
                   <div class="titlepage">
                      <h2 class="left">Paquete de mantenimiento básico</h2>
                      <ul class="justificado">
-                        <li>Cantidad de equipos: 10</li>
+                        <li><b>Cantidad de equipos: 10</li>
                         <li>Mantenimiento preventivo y correctivo de PCs y laptops</li>
                         <li>Actualizaciones de software y parches de seguridad</li>
                         <li>Soporte remoto (hasta 5 horas al mes)</li>
                         <li>Instalación y configuración de software</li>
-                        <li>Gestión básica de antivirus</li>
+                        <li>Gestión básica de antivirus</b></li>
                     </ul>
                      <a class="read_more" href="#">$300.00</a>
                   </div>
                </div>
             </div>
          </div>
+         <div class="row comments">
+            <div class="col-md-12">
+                <h4>Comentarios de Usuarios</h4>
+                <div id="comments-section">
+                    <div class="comment">
+                        <p><strong>Bruce Wayne:</strong> ¡Excelente producto! Muy recomendado.</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Tom Holland</strong> La batería dura mucho tiempo depues del mantenimiento. Muy satisfecho.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="new-comment">Añadir un comentario:</label>
+                    <textarea class="form-control" id="new-comment" rows="3"></textarea>
+                    <button class="btn btn-primary mt-2" onclick="addComment()">Enviar</button>
+                </div>
+            </div>
+        </div>
       </div>
+
+      
       <!-- end laptop1 -->
       <!--  footer -->
       <footer>
@@ -202,6 +222,21 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+      <script>
+         
+function addComment() {
+    var commentText = document.getElementById('new-comment').value;
+    if (commentText) {
+        var commentSection = document.getElementById('comments-section');
+        var newComment = document.createElement('div');
+        newComment.classList.add('comment');
+        newComment.innerHTML = '<p><strong>Nuevo Usuario:</strong> ' + commentText + '</p>';
+        commentSection.appendChild(newComment);
+        document.getElementById('new-comment').value = '';
+    }
+}
+
+      </script>
    </body>
 </html>
 

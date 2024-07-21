@@ -144,6 +144,24 @@
                </div>
             </div>
          </div>
+         <div class="row comments">
+            <div class="col-md-12">
+                <h4>Comentarios de Usuarios</h4>
+                <div id="comments-section">
+                    <div class="comment">
+                        <p><strong>Bruce Wayne:</strong> ¡Excelente producto! Muy recomendado.</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Tom Holland</strong> La batería dura mucho tiempo. Muy satisfecho.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="new-comment">Añadir un comentario:</label>
+                    <textarea class="form-control" id="new-comment" rows="3"></textarea>
+                    <button class="btn btn-primary mt-2" onclick="addComment()">Enviar</button>
+                </div>
+            </div>
+        </div>
       </div>
       <!-- end laptop1 -->
       <!--  footer -->
@@ -198,6 +216,19 @@
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
+      <script>
+         function addComment() {
+             var commentText = document.getElementById('new-comment').value;
+             if (commentText) {
+                 var commentSection = document.getElementById('comments-section');
+                 var newComment = document.createElement('div');
+                 newComment.classList.add('comment');
+                 newComment.innerHTML = '<p><strong>Nuevo Usuario:</strong> ' + commentText + '</p>';
+                 commentSection.appendChild(newComment);
+                 document.getElementById('new-comment').value = '';
+             }
+         }
+         </script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
